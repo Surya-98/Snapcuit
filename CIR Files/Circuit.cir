@@ -1,0 +1,34 @@
+Circuit
+.include bc547.txt 
+
+r1 1 2 1k
+r2 4 6 1k
+r3 6 0 1k
+r4 1 4 1k
+r5 1 7 1k
+r6 3 8 1k
+r7 1 9 1k
+r8 3 10 1k
+r9 1 12 1k
+r10 12 5 1k
+c1 2 6 1m
+c2 4 6 1m
+c3 3 0 1m
+c4 7 8 1m
+c5 9 10 1m
+q1 2 4 3 bc547a
+q2 4 6 0 bc547a
+q3 9 8 0 bc547a
+q4 7 10 11 bc547a
+q5 5 11 0 bc547a
+v1 1 0 0v
+
+.dc v1 0 10 0.1 
+.control 
+run 
+plot v(12) vs v(1) 
+.endc
+.end
+
+
+

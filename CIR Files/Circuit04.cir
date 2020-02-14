@@ -1,0 +1,17 @@
+Circuit04
+.include bc547.txt 
+
+v1 1 0 dc 0v 
+r1 1 2 40k
+r2 3 4 1k 
+v2 5 0 dc 10v
+q1 3 2 0 bc547a 
+
+vib  4 5 dc 0v
+
+.dc v1 0 10 0.01 
+.control 
+run 
+plot I(vib) vs v(2) 
+.endc
+.end

@@ -1,0 +1,15 @@
+Circuit02
+
+
+r1 1 2 1k 
+d1 2 3 
+v1 1 0 dc 0v
+v2 3 0 dc 0v
+ 
+.dc v1 0 10 0.1
+ 
+.control 
+run 
+plot v(2) vs v(1) 
+.endc 
+.end
